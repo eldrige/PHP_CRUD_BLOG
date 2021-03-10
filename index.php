@@ -53,7 +53,7 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
             <td><?php echo $post['details'] ?></td>
             <td><?php echo $post['create_at'] ?></td>
             <td>
-              <button class="btn btn-outline-primary">Edit</button>
+              <a href="update.php?id=<?php echo $post['id'] ?>" class="btn btn-outline-primary">Edit</a>
               <form method="post" action="delete.php" class="d-flex">
                 <input type="hidden" name="id" value="<?php echo $post['id'] ?>" />
                 <button type="submit" class="btn  btn-outline-danger">Delete</button>
