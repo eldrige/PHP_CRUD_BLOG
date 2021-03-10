@@ -30,7 +30,7 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <div class="container">
     <h1 class="display-3">Eldrige Blog Post</h1>
-    <div class="jumbotron">
+    <div class="jumbotron my-3">
       <p>Simple Blog Post created with PHP</p>
     </div>
     <a href="create.php" class="btn btn-success m-5">Create new post</a>
@@ -52,8 +52,8 @@ $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
             <td><?php echo $post['title'] ?></td>
             <td><?php echo $post['details'] ?></td>
             <td><?php echo $post['create_at'] ?></td>
-            <td>
-              <a href="update.php?id=<?php echo $post['id'] ?>" class="btn btn-outline-primary">Edit</a>
+            <td class="d-flex">
+              <a href="update.php?id=<?php echo $post['id'] ?>" class="btn btn-outline-primary mx-3">Edit</a>
               <form method="post" action="delete.php" class="d-flex">
                 <input type="hidden" name="id" value="<?php echo $post['id'] ?>" />
                 <button type="submit" class="btn  btn-outline-danger">Delete</button>

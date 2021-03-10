@@ -25,12 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   $title = $_POST['title'];
   $details = $_POST['details'];
-
-
-
-
-
-
   $statement = $pdo->prepare("UPDATE posts SET title = :title,  details = :details  WHERE id = :id");
   $statement->bindValue(':title', $title);
   $statement->bindValue(':details', $details);

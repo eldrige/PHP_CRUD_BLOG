@@ -2,7 +2,12 @@ body {
   background-color: #1a2634;
   color: #fff;
 }
-
+div.jumbotron {
+  background-color: #0d1219;
+}
+div.jumbotron p {
+  color: white;
+}
 th,
 td {
   color: #fff;
